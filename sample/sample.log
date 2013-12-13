@@ -1,0 +1,78 @@
+events: ms hits
+summary: 2565 2147
+fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:1
+fn=(anonymous function) script.js:1
+1 3 3
+cfi=:0
+cfn=profile :0
+calls=0 0
+1 1 1
+cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:21
+cfn=main script.js:21
+calls=0 21
+1 2510 2101
+cfi=:0
+cfn=log :0
+calls=0 0
+1 2 2
+
+fl=:0
+fn=(garbage collector) :0
+0 47 40
+
+fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
+fn=foo script.js:3
+3 837 701
+
+fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
+fn=bar script.js:11
+11 1 1
+cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
+cfn=foo script.js:3
+calls=0 3
+11 242 203
+
+fl=:0
+fn=profile :0
+0 1 1
+
+fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
+fn=foo script.js:3
+3 242 203
+
+fl=:0
+fn=(root) :0
+0 0 0
+cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:1
+cfn=(anonymous function) script.js:1
+calls=0 1
+0 2517 2107
+cfi=:0
+cfn=(garbage collector) :0
+calls=0 0
+0 47 40
+
+fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:21
+fn=main script.js:21
+21 945 791
+cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
+cfn=foo script.js:3
+calls=0 3
+21 837 701
+cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
+cfn=bar script.js:11
+calls=0 11
+21 243 204
+cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
+cfn=bar script.js:11
+calls=0 11
+21 483 405
+
+fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
+fn=bar script.js:11
+11 483 405
+
+fl=:0
+fn=log :0
+0 2 2
+
