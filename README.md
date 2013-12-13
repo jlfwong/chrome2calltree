@@ -23,7 +23,7 @@ brew install qcachegrind
 Once you have that, grab the npm package:
 
 ```
-npm install chrome2calltree
+npm install -g chrome2calltree
 ```
 
 # Usage
