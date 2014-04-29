@@ -94,7 +94,7 @@ var chromeProfileToCallgrind = function(profile, outStream) {
             continue;
         }
         var call = calls[callUID];
-        outStream.write(_s.sprintf('fl=%s:%d\n', call.url, call.lineNumber));
+        outStream.write(_s.sprintf('fl=%s\n', call.url));
         outStream.write(_s.sprintf('fn=%s\n', fnForCall(call)));
         outStream.write(_s.sprintf('%d %d %d\n', call.lineNumber,
                 call.selfTime, call.selfHitCount));
@@ -103,8 +103,8 @@ var chromeProfileToCallgrind = function(profile, outStream) {
                 continue;
             }
             var childCall = call.childCalls[childCallUID];
-            outStream.write(_s.sprintf('cfi=%s:%d\n',
-                    childCall.url, childCall.lineNumber));
+            outStream.write(_s.sprintf('cfi=%s\n',
+                    childCall.url));
             outStream.write(_s.sprintf('cfn=%s\n', fnForCall(childCall)));
 
             outStream.write(_s.sprintf('calls=0 %d\n', childCall.lineNumber));
