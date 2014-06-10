@@ -1,32 +1,32 @@
 {
-    "name" : "chrome2calltree",
-    "description" : "convert chrome CPU profiles to callgrind formatted files",
-    "version" : "0.0.1",
-    "repository" : {
-        "type" : "git",
-        "url" : "git://github.com/phleet/chrome2calltree.git"
-    },
-    "main" : "index.js",
-    "bin": {
-        "chrome2calltree": "./bin/chrome2calltree.js"
-    },
-    "keywords" : [
-        "chrome",
-        "callgrind",
-        "kcachegrind",
-        "qcachegrind",
-        "profile"
-    ],
-    "dependencies" : {
-        "argparse": "~0.1.15",
-        "lodash" : "~2.3.0",
-        "underscore.string": "~2.3.3",
-        "execSync": "~1.0.1",
-        "temp": "~0.6.0"
-    },
-    "license" : "MIT",
-    "author" : {
-        "name" : "Jamie Wong",
-        "url" : "http://jamie-wong.com"
-    }
+  "name": "chrome2calltree",
+  "description": "convert chrome CPU profiles to callgrind formatted files",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/phleet/chrome2calltree.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "chrome2calltree": "./bin/chrome2calltree.js"
+  },
+  "keywords": [
+    "chrome",
+    "callgrind",
+    "kcachegrind",
+    "qcachegrind",
+    "profile"
+  ],
+  "dependencies": {
+    "argparse": "~0.1.15",
+    "lodash": "~2.3.0",
+    "underscore.string": "~2.3.3",
+    "execSync": "~1.0.1",
+    "temp": "~0.6.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jamie Wong",
+    "url": "http://jamie-wong.com"
+  }
 }
