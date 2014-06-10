@@ -103,8 +103,7 @@ var chromeProfileToCallgrind = function(profile, outStream) {
                 continue;
             }
             var childCall = call.childCalls[childCallUID];
-            outStream.write(_s.sprintf('cfi=%s\n',
-                    childCall.url));
+            outStream.write(_s.sprintf('cfi=%s\n', childCall.url));
             outStream.write(_s.sprintf('cfn=%s\n', fnForCall(childCall)));
 
             outStream.write(_s.sprintf('calls=0 %d\n', childCall.lineNumber));
