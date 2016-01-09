@@ -21,7 +21,7 @@
     "argparse": "~0.1.15",
     "lodash": "~2.3.0",
     "underscore.string": "~2.3.3",
-    "execSync": "~1.0.1",
+    "sync-exec": "~0.6.2",
     "temp": "~0.6.0"
   },
   "license": "MIT",
