@@ -3,7 +3,7 @@ var fs = require("fs");
 
 var argparse = require("argparse");
 var temp = require("temp");
-var execSync = require("execSync");
+var exec = require('sync-exec');
 
 // Clean up temporary files on exit
 temp.track();
@@ -74,8 +74,8 @@ var launchKCacheGrind = function(logpath) {
     var commands = ['qcachegrind', 'kcachegrind'];
     for (var i = 0; i < commands.length; i++) {
         var cmd = commands[i];
-        if (execSync.exec('which ' + cmd).code === 0) {
-            execSync.run(cmd + ' ' + outStream.path);
+        if (exec('which ' + cmd).status === 0) {
+            exec(cmd + ' ' + outStream.path);
             found = true;
             break;
         }
