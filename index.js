@@ -5,14 +5,15 @@ var _s = require("underscore.string");
 
 // Based on WebInspector.CPUProfileView in CPUProfileView.js in Blink source.
 // https://github.com/yoavweiss/Blink/blob/master/Source/devtools/front_end/CPUProfileView.js
-var calculateTimes = function(profile) {
-    var totalHitCount = function(node) {
-        var result = node.hitCount;
-        for (var i = 0; i < node.children.length; i++) {
-            result += totalHitCount(node.children[i]);
-        }
-        return result;
-    };
+var totalHitCount = function(node) {
+    var result = node.hitCount;
+    for (var i = 0; i < node.children.length; i++) {
+        result += totalHitCount(node.children[i]);
+    }
+    return result;
+};
+
+var calculateTimes = function(profile) {    
     profile.totalHitCount = totalHitCount(profile.head);
     profile.totalTime = 1000 * (profile.endTime - profile.startTime);
 
