@@ -46,7 +46,7 @@ var walkTree = function(node, cb) {
 };
 
 var chromeProfileToCallgrind = function(profile, outStream) {
-    var timedProfile = _.cloneDeep(profile);
+    var timedProfile = profile; //_.cloneDeep(profile);
     calculateTimes(timedProfile);
 
     var calls = {};
