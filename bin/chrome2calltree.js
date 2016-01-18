@@ -30,6 +30,10 @@ parser.addArgument(['-k', '--kcachegrind'], {
             "remove it after kcachegrind exits.",
     'action': 'storeTrue'
 });
+parser.addArgument(['-m', '--mutate'], {
+    'help': "Allow the script to mutate the input, as an optimization.",
+    'action': 'storeTrue'
+});
 
 var args = parser.parseArgs();
 
@@ -88,7 +92,8 @@ var launchKCacheGrind = function(logpath) {
 };
 
 readEntireStream(inStream, function(contents) {
-    chrome2calltree.chromeProfileToCallgrind(JSON.parse(contents), outStream);
+    var copy = args.mutate ? false : true;
+    chrome2calltree.chromeProfileToCallgrind(JSON.parse(contents), outStream, copy);
     outStream.on('finish', function() {
         if (outStream !== process.stdout) {
           outStream.close();

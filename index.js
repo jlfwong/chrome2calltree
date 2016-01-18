@@ -57,13 +57,14 @@ var fnForCall = function(call) {
             call.functionName, baseUrl, call.lineNumber);
 };
 
-var chromeProfileToCallgrind = function(profile, outStream) {
+var chromeProfileToCallgrind = function(profile, outStream, copy) {
+    var timedProfile = copy ? _.cloneDeep(profile) : profile;
 
-    calculateTimes(profile);
+    calculateTimes(timedProfile);
 
     var calls = {};
 
-    var allNodes = treeToArray(profile.head);
+    var allNodes = treeToArray(timedProfile.head);
     for (var i = 0; i < allNodes.length; i++) {
         var node = allNodes[i];
 
@@ -99,7 +100,7 @@ var chromeProfileToCallgrind = function(profile, outStream) {
 
     outStream.write('events: ms hits\n');
     outStream.write(_s.sprintf('summary: %d %d\n',
-            profile.totalTime, profile.totalHitCount));
+            timedProfile.totalTime, timedProfile.totalHitCount));
 
 
     // by using Object.keys, we can skip the
