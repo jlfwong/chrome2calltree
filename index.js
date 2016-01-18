@@ -5,7 +5,7 @@ var _s = require("underscore.string");
 
 // Based on WebInspector.CPUProfileView in CPUProfileView.js in Blink source.
 // https://github.com/yoavweiss/Blink/blob/master/Source/devtools/front_end/CPUProfileView.js
-var totalHitCount = function (node) {
+var totalHitCount = function(node) {
     var result = node.hitCount;
     for (var i = 0; i < node.children.length; i++) {
         result += totalHitCount(node.children[i]);
@@ -13,7 +13,7 @@ var totalHitCount = function (node) {
     return result;
 };
 
-var calculateTimesForNode = function (node, samplingInterval) {
+var calculateTimesForNode = function(node, samplingInterval) {
     node.selfTime = node.hitCount * samplingInterval;
     node.selfHitCount = node.hitCount;
     var totalHitCount = node.hitCount;
@@ -25,7 +25,7 @@ var calculateTimesForNode = function (node, samplingInterval) {
     return totalHitCount;
 };
 
-var calculateTimes = function (profile) {    
+var calculateTimes = function(profile) {    
     profile.totalHitCount = totalHitCount(profile.head);
     profile.totalTime = 1000 * (profile.endTime - profile.startTime);
     var samplingInterval = profile.totalTime / profile.totalHitCount;
@@ -33,7 +33,7 @@ var calculateTimes = function (profile) {
     calculateTimesForNode(profile.head, samplingInterval);
 };
 
-var treeToArrayAcc = function (node, acc) {
+var treeToArrayAcc = function(node, acc) {
     acc.push(node);
     for (var i = 0; i < node.children.length; i++) {
         acc = acc.concat(treeToArrayAcc(node.children[i], []));
@@ -41,7 +41,7 @@ var treeToArrayAcc = function (node, acc) {
     return acc;
 }
 
-var treeToArray = function (node) {
+var treeToArray = function(node) {
     return treeToArrayAcc(node, []);
 }
 
@@ -51,7 +51,7 @@ var fnForCall = function(call) {
             call.functionName, baseUrl, call.lineNumber);
 };
 
-var chromeProfileToCallgrind = function (profile, outStream) {
+var chromeProfileToCallgrind = function(profile, outStream) {
 
     calculateTimes(profile);
 
