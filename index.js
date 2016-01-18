@@ -7,8 +7,10 @@ var _s = require("underscore.string");
 // https://github.com/yoavweiss/Blink/blob/master/Source/devtools/front_end/CPUProfileView.js
 var totalHitCount = function(node) {
     var result = node.hitCount;
-    for (var i = 0; i < node.children.length; i++) {
-        result += totalHitCount(node.children[i]);
+    if (node.children) {
+        for (var i = 0; i < node.children.length; i++) {
+            result += totalHitCount(node.children[i]);
+        }    
     }
     return result;
 };
@@ -17,8 +19,10 @@ var calculateTimesForNode = function(node, samplingInterval) {
     node.selfTime = node.hitCount * samplingInterval;
     node.selfHitCount = node.hitCount;
     var totalHitCount = node.hitCount;
-    for (var i = 0; i < node.children.length; i++) {
-        totalHitCount += calculateTimesForNode(node.children[i], samplingInterval);
+    if (node.children) {
+        for (var i = 0; i < node.children.length; i++) {
+            totalHitCount += calculateTimesForNode(node.children[i], samplingInterval);
+        }    
     }
     node.totalTime = totalHitCount * samplingInterval;
     node.totalHitCount = totalHitCount;
@@ -35,8 +39,10 @@ var calculateTimes = function(profile) {
 
 var treeToArrayAcc = function(node, acc) {
     acc.push(node);
-    for (var i = 0; i < node.children.length; i++) {
-        acc = acc.concat(treeToArrayAcc(node.children[i], []));
+    if (node.children) {
+        for (var i = 0; i < node.children.length; i++) {
+            acc = acc.concat(treeToArrayAcc(node.children[i], []));
+        }
     }
     return acc;
 }
@@ -73,19 +79,21 @@ var chromeProfileToCallgrind = function(profile, outStream) {
         call.selfTime += node.selfTime;
 
         var childCalls = call.childCalls;
-        for(var j = 0; j < node.children.length; j++) {
-            var child = node.children[j];
+        if (node.children) {
+            for(var j = 0; j < node.children.length; j++) {
+                var child = node.children[j];
 
-            var childUID = child.callUID;
-            var childCall = childCalls[childUID] = childCalls[childUID] || {
-                functionName: child.functionName,
-                url: child.url,
-                totalHitCount: 0,
-                totalTime: 0,
-                lineNumber: child.lineNumber
-            };
-            childCall.totalHitCount += child.totalHitCount;
-            childCall.totalTime += child.totalTime;
+                var childUID = child.callUID;
+                var childCall = childCalls[childUID] = childCalls[childUID] || {
+                    functionName: child.functionName,
+                    url: child.url,
+                    totalHitCount: 0,
+                    totalTime: 0,
+                    lineNumber: child.lineNumber
+                };
+                childCall.totalHitCount += child.totalHitCount;
+                childCall.totalTime += child.totalTime;
+            }    
         }
     }
 
