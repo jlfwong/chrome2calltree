@@ -45,11 +45,11 @@ var treeToArrayAcc = function(node, acc) {
         }
     }
     return acc;
-}
+};
 
 var treeToArray = function(node) {
     return treeToArrayAcc(node, []);
-}
+};
 
 var fnForCall = function(call) {
     var baseUrl = _.last(_.first(call.url.split("?")).split("/"));
@@ -65,10 +65,13 @@ var chromeProfileToCallgrind = function(profile, outStream, copy) {
     var calls = {};
 
     var allNodes = treeToArray(timedProfile.head);
-    for (var i = 0; i < allNodes.length; i++) {
+
+    // declare iterator vars used in two different blocks
+    var i, j, call, childCall; 
+    for (i = 0; i < allNodes.length; i++) {
         var node = allNodes[i];
 
-        var call = calls[node.callUID] = calls[node.callUID] || {
+        call = calls[node.callUID] = calls[node.callUID] || {
             functionName: node.functionName,
             url: node.url,
             selfTime: 0,
@@ -81,11 +84,11 @@ var chromeProfileToCallgrind = function(profile, outStream, copy) {
 
         var childCalls = call.childCalls;
         if (node.children) {
-            for(var j = 0; j < node.children.length; j++) {
+            for(j = 0; j < node.children.length; j++) {
                 var child = node.children[j];
 
                 var childUID = child.callUID;
-                var childCall = childCalls[childUID] = childCalls[childUID] || {
+                childCall = childCalls[childUID] = childCalls[childUID] || {
                     functionName: child.functionName,
                     url: child.url,
                     totalHitCount: 0,
@@ -106,8 +109,8 @@ var chromeProfileToCallgrind = function(profile, outStream, copy) {
     // by using Object.keys, we can skip the
     // hasOwnProperty check
     var callUIDArray = Object.keys(calls);
-    for (var i = 0; i < callUIDArray.length; i++) {
-        var call = calls[callUIDArray[i]];
+    for (i = 0; i < callUIDArray.length; i++) {
+        call = calls[callUIDArray[i]];
 
         outStream.write(_s.sprintf('fl=%s\n', call.url));
         outStream.write(_s.sprintf('fn=%s\n', fnForCall(call)));
@@ -115,8 +118,8 @@ var chromeProfileToCallgrind = function(profile, outStream, copy) {
                 call.selfTime, call.selfHitCount));
 
         var childCallUIDArray = Object.keys(call.childCalls);
-        for (var j = 0; j < childCallUIDArray.length; j++) {
-            var childCall = call.childCalls[childCallUIDArray[j]];
+        for (j = 0; j < childCallUIDArray.length; j++) {
+            childCall = call.childCalls[childCallUIDArray[j]];
 
             outStream.write(_s.sprintf('cfi=%s\n', childCall.url));
             outStream.write(_s.sprintf('cfn=%s\n', fnForCall(childCall)));
