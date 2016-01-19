@@ -1,7 +1,7 @@
 {
   "name": "chrome2calltree",
   "description": "convert chrome CPU profiles to callgrind formatted files",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/phleet/chrome2calltree.git"
