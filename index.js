@@ -58,6 +58,9 @@ var fnForCall = function(call) {
 };
 
 var chromeProfileToCallgrind = function(profile, outStream, copy) {
+    if (typeof copy === 'undefined') {
+	copy = true;
+    }
     var timedProfile = copy ? _.cloneDeep(profile) : profile;
 
     calculateTimes(timedProfile);
