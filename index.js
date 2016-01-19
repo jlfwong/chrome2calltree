@@ -97,7 +97,7 @@ var chromeProfileToCallgrind = function(profile, outStream, copy) {
                 };
                 childCall.totalHitCount += child.totalHitCount;
                 childCall.totalTime += child.totalTime;
-            }    
+            }
         }
     }
 
