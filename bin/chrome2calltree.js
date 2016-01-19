@@ -88,7 +88,8 @@ var launchKCacheGrind = function(logpath) {
 };
 
 readEntireStream(inStream, function(contents) {
-    chrome2calltree.chromeProfileToCallgrind(JSON.parse(contents), outStream);
+    var copy = false; // For efficiency, we mutate the profile in place
+    chrome2calltree.chromeProfileToCallgrind(JSON.parse(contents), outStream, copy);
     outStream.on('finish', function() {
         if (outStream !== process.stdout) {
           outStream.close();
