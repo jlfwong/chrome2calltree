@@ -43,8 +43,14 @@ var calculateTimes = function(profile) {
 
 var fnForCall = function(call) {
     var baseUrl = _.last(_.first(call.url.split("?")).split("/"));
-    return _s.sprintf("%s %s:%d",
-            call.functionName, baseUrl, call.lineNumber);
+    if (call.lineNumber < 0) {
+        // kcachegrind complains about negative line numbers
+        return _s.sprintf("%s %s",
+                call.functionName, baseUrl);
+    } else {
+        return _s.sprintf("%s %s:%d",
+                call.functionName, baseUrl, call.lineNumber);
+    }
 };
 
 var chromeProfileToCallgrind = function(profile, outStream, copy) {
@@ -107,7 +113,7 @@ var chromeProfileToCallgrind = function(profile, outStream, copy) {
 
         outStream.write(_s.sprintf('fl=%s\n', call.url));
         outStream.write(_s.sprintf('fn=%s\n', fnForCall(call)));
-        outStream.write(_s.sprintf('%d %d %d\n', call.lineNumber,
+        outStream.write(_s.sprintf('%d %d %d\n', Math.max(0, call.lineNumber),
                 call.selfTime, call.selfHitCount));
 
         var childCallUIDArray = Object.keys(call.childCalls);
@@ -117,9 +123,9 @@ var chromeProfileToCallgrind = function(profile, outStream, copy) {
             outStream.write(_s.sprintf('cfi=%s\n', childCall.url));
             outStream.write(_s.sprintf('cfn=%s\n', fnForCall(childCall)));
 
-            outStream.write(_s.sprintf('calls=0 %d\n', childCall.lineNumber));
+            outStream.write(_s.sprintf('calls=0 %d\n', Math.max(0, childCall.lineNumber)));
             outStream.write(_s.sprintf('%d %d %d\n',
-                    call.lineNumber, childCall.totalTime,
+                    Math.max(0, call.lineNumber), childCall.totalTime,
                     childCall.totalHitCount));
         }
         outStream.write('\n');
