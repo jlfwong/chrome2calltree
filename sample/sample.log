@@ -1,78 +1,1118 @@
 events: ms hits
-summary: 2565 2147
-fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:1
-fn=(anonymous function) script.js:1
-1 3 3
-cfi=:0
-cfn=profile :0
-calls=0 0
-1 1 1
-cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:21
-cfn=main script.js:21
-calls=0 21
-1 2510 2101
-cfi=:0
-cfn=log :0
-calls=0 0
-1 2 2
-
-fl=:0
-fn=(garbage collector) :0
-0 47 40
-
-fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
-fn=foo script.js:3
-3 837 701
-
-fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
-fn=bar script.js:11
-11 1 1
-cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
-cfn=foo script.js:3
-calls=0 3
-11 242 203
-
-fl=:0
-fn=profile :0
-0 1 1
-
-fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
-fn=foo script.js:3
-3 242 203
-
-fl=:0
-fn=(root) :0
+summary: 503538000 471
+fl=
+fn=(root) 
 0 0 0
-cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:1
-cfn=(anonymous function) script.js:1
-calls=0 1
-0 2517 2107
-cfi=:0
-cfn=(garbage collector) :0
+cfi=
+cfn=(program) 
 calls=0 0
-0 47 40
+0 2138165 2
+cfi=internal/bootstrap/loaders.js
+cfn= loaders.js:0
+calls=0 0
+0 1069082 1
+cfi=internal/bootstrap/node.js
+cfn= node.js:0
+calls=0 0
+0 24588904 23
+cfi=
+cfn=(garbage collector) 
+calls=0 0
+0 2138165 2
+cfi=internal/main/run_main_module.js
+cfn= run_main_module.js:0
+calls=0 0
+0 472534598 442
+cfi=internal/process/task_queues.js
+cfn=processTicksAndRejections task_queues.js:64
+calls=0 64
+0 1069082 1
 
-fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:21
-fn=main script.js:21
-21 945 791
-cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:3
-cfn=foo script.js:3
-calls=0 3
-21 837 701
-cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
-cfn=bar script.js:11
-calls=0 11
-21 243 204
-cfi=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
-cfn=bar script.js:11
-calls=0 11
-21 483 405
+fl=
+fn=(program) 
+0 2138165 2
 
-fl=file://localhost/Users/jlfwong/code/chrome2calltree/sample/script.js:11
-fn=bar script.js:11
-11 483 405
+fl=internal/bootstrap/loaders.js
+fn= loaders.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=<static_fields_initializer> loaders.js:168
+calls=0 168
+0 1069082 1
 
-fl=:0
-fn=log :0
-0 2 2
+fl=internal/bootstrap/loaders.js
+fn=<static_fields_initializer> loaders.js:168
+168 0 0
+cfi=internal/per_context/primordials.js
+cfn= primordials.js:22
+calls=0 22
+168 1069082 1
+
+fl=internal/per_context/primordials.js
+fn= primordials.js:22
+22 1069082 1
+
+fl=internal/bootstrap/node.js
+fn= node.js:0
+0 2138165 2
+cfi=internal/bootstrap/node.js
+cfn=setupPrepareStackTrace node.js:251
+calls=0 251
+0 2138165 2
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 8552662 8
+cfi=internal/bootstrap/node.js
+cfn=setupProcessObject node.js:270
+calls=0 270
+0 4276331 4
+cfi=internal/bootstrap/node.js
+cfn=setupBuffer node.js:299
+calls=0 299
+0 4276331 4
+cfi=internal/bootstrap/node.js
+cfn=createGlobalConsole node.js:316
+calls=0 316
+0 3207248 3
+
+fl=internal/bootstrap/node.js
+fn=setupPrepareStackTrace node.js:251
+251 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+251 2138165 2
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 2138165 2
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 2138165 2
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 8552662 8
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 3207248 3
+cfi=internal/async_hooks.js
+cfn= async_hooks.js:0
+calls=0 0
+269 1069082 1
+cfi=internal/url.js
+cfn= url.js:0
+calls=0 0
+269 2138165 2
+cfi=timers.js
+cfn= timers.js:0
+calls=0 0
+269 2138165 2
+
+fl=
+fn=(garbage collector) 
+0 2138165 2
+
+fl=internal/bootstrap/node.js
+fn=setupProcessObject node.js:270
+270 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+270 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+cfi=events.js
+cfn= events.js:0
+calls=0 0
+269 3207248 3
+
+fl=events.js
+fn= events.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 3207248 3
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 3207248 3
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 2138165 2
+cfi=internal/util/inspect.js
+cfn= inspect.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/util/inspect.js
+fn= inspect.js:0
+0 1069082 1
+
+fl=internal/bootstrap/node.js
+fn=setupBuffer node.js:299
+299 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+299 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 2138165 2
+cfi=buffer.js
+cfn= buffer.js:0
+calls=0 0
+269 2138165 2
+
+fl=buffer.js
+fn= buffer.js:0
+0 1069082 1
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+
+fl=internal/async_hooks.js
+fn= async_hooks.js:0
+0 1069082 1
+
+fl=internal/bootstrap/node.js
+fn=createGlobalConsole node.js:316
+316 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+316 2138165 2
+cfi=internal/util/inspector.js
+cfn=wrapConsole inspector.js:35
+calls=0 35
+316 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 2138165 2
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+cfi=internal/console/global.js
+cfn= global.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/console/global.js
+fn= global.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=internal/console/constructor.js
+cfn= constructor.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/console/constructor.js
+fn= constructor.js:0
+0 1069082 1
+
+fl=internal/util/inspector.js
+fn=wrapConsole inspector.js:35
+35 1069082 1
+
+fl=internal/url.js
+fn= url.js:0
+0 1069082 1
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+
+fl=timers.js
+fn= timers.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 2138165 2
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 2138165 2
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+cfi=internal/timers.js
+cfn= timers.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/timers.js
+fn= timers.js:0
+0 1069082 1
+
+fl=internal/main/run_main_module.js
+fn= run_main_module.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+cfi=internal/bootstrap/pre_execution.js
+cfn=prepareMainThreadExecution pre_execution.js:18
+calls=0 18
+0 16036242 15
+cfi=internal/modules/run_main.js
+cfn=executeUserEntryPoint run_main.js:64
+calls=0 64
+0 455429273 426
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=internal/bootstrap/pre_execution.js
+cfn= pre_execution.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/bootstrap/pre_execution.js
+fn= pre_execution.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=internal/options.js
+cfn= options.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/options.js
+fn= options.js:0
+0 1069082 1
+
+fl=internal/bootstrap/pre_execution.js
+fn=prepareMainThreadExecution pre_execution.js:18
+18 1069082 1
+cfi=internal/bootstrap/pre_execution.js
+cfn=patchProcessObject pre_execution.js:79
+calls=0 79
+18 1069082 1
+cfi=internal/bootstrap/pre_execution.js
+cfn=initializeCJSLoader pre_execution.js:406
+calls=0 406
+18 13898076 13
+
+fl=internal/bootstrap/pre_execution.js
+fn=patchProcessObject pre_execution.js:79
+79 0 0
+cfi=internal/bootstrap/pre_execution.js
+cfn=addReadOnlyProcessAlias pre_execution.js:119
+calls=0 119
+79 1069082 1
+
+fl=internal/bootstrap/pre_execution.js
+fn=addReadOnlyProcessAlias pre_execution.js:119
+119 1069082 1
+
+fl=internal/bootstrap/pre_execution.js
+fn=initializeCJSLoader pre_execution.js:406
+406 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+406 13898076 13
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 13898076 13
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+cfi=internal/modules/cjs/loader.js
+cfn= loader.js:0
+calls=0 0
+269 12828993 12
+
+fl=internal/modules/cjs/loader.js
+fn= loader.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 11759910 11
+cfi=internal/util.js
+cfn=deprecate util.js:64
+calls=0 64
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 11759910 11
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+cfi=internal/source_map/source_map_cache.js
+cfn= source_map_cache.js:0
+calls=0 0
+269 6414496 6
+cfi=internal/process/esm_loader.js
+cfn= esm_loader.js:0
+calls=0 0
+269 4276331 4
+
+fl=internal/source_map/source_map_cache.js
+fn= source_map_cache.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 6414496 6
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 6414496 6
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 3207248 3
+cfi=fs.js
+cfn= fs.js:0
+calls=0 0
+269 2138165 2
+cfi=internal/modules/cjs/helpers.js
+cfn= helpers.js:0
+calls=0 0
+269 1069082 1
+
+fl=fs.js
+fn= fs.js:0
+0 1069082 1
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=internal/fs/utils.js
+cfn= utils.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/fs/utils.js
+fn= utils.js:0
+0 1069082 1
+
+fl=internal/modules/cjs/helpers.js
+fn= helpers.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+
+fl=internal/process/esm_loader.js
+fn= esm_loader.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=internal/modules/esm/loader.js
+cfn= loader.js:0
+calls=0 0
+269 4276331 4
+
+fl=internal/modules/esm/loader.js
+fn= loader.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 4276331 4
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 2138165 2
+cfi=internal/modules/esm/get_source.js
+cfn= get_source.js:0
+calls=0 0
+269 1069082 1
+cfi=internal/modules/esm/translators.js
+cfn= translators.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/modules/esm/get_source.js
+fn= get_source.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=internal/fs/promises.js
+cfn= promises.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/fs/promises.js
+fn= promises.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+
+fl=internal/modules/esm/translators.js
+fn= translators.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+
+fl=internal/util.js
+fn=deprecate util.js:64
+64 0 0
+cfi=
+cfn=get prototype 
+calls=0 0
+64 1069082 1
+
+fl=
+fn=get prototype 
+0 1069082 1
+
+fl=internal/modules/run_main.js
+fn=executeUserEntryPoint run_main.js:64
+64 0 0
+cfi=internal/modules/run_main.js
+cfn=resolveMainPath run_main.js:7
+calls=0 7
+64 2138165 2
+cfi=internal/modules/cjs/loader.js
+cfn=Module._load loader.js:703
+calls=0 703
+64 453291108 424
+
+fl=internal/modules/run_main.js
+fn=resolveMainPath run_main.js:7
+7 0 0
+cfi=internal/modules/cjs/loader.js
+cfn=Module._findPath loader.js:443
+calls=0 443
+7 2138165 2
+
+fl=internal/modules/cjs/loader.js
+fn=Module._findPath loader.js:443
+443 1069082 1
+cfi=internal/modules/cjs/loader.js
+cfn=toRealPath loader.js:342
+calls=0 342
+443 1069082 1
+
+fl=internal/modules/cjs/loader.js
+fn=toRealPath loader.js:342
+342 0 0
+cfi=fs.js
+cfn=realpathSync fs.js:1649
+calls=0 1649
+342 1069082 1
+
+fl=fs.js
+fn=realpathSync fs.js:1649
+1649 1069082 1
+
+fl=internal/modules/cjs/loader.js
+fn=Module._load loader.js:703
+703 1069082 1
+cfi=internal/modules/cjs/loader.js
+cfn=Module.load loader.js:915
+calls=0 915
+703 452222025 423
+
+fl=internal/modules/cjs/loader.js
+fn=Module.load loader.js:915
+915 0 0
+cfi=internal/modules/cjs/loader.js
+cfn=findLongestRegisteredExtension loader.js:362
+calls=0 362
+915 1069082 1
+cfi=internal/modules/cjs/loader.js
+cfn=Module._extensions..js loader.js:1071
+calls=0 1071
+915 451152942 422
+
+fl=internal/modules/cjs/loader.js
+fn=findLongestRegisteredExtension loader.js:362
+362 1069082 1
+
+fl=internal/modules/cjs/loader.js
+fn=Module._extensions..js loader.js:1071
+1071 0 0
+cfi=fs.js
+cfn=readFileSync fs.js:373
+calls=0 373
+1071 1069082 1
+cfi=internal/modules/cjs/loader.js
+cfn=Module._compile loader.js:1016
+calls=0 1016
+1071 450083859 421
+
+fl=fs.js
+fn=readFileSync fs.js:373
+373 0 0
+cfi=fs.js
+cfn=tryReadSync fs.js:361
+calls=0 361
+373 1069082 1
+
+fl=fs.js
+fn=tryReadSync fs.js:361
+361 0 0
+cfi=fs.js
+cfn=readSync fs.js:554
+calls=0 554
+361 1069082 1
+
+fl=fs.js
+fn=readSync fs.js:554
+554 0 0
+cfi=internal/errors.js
+cfn=hidden errors.js:285
+calls=0 285
+554 1069082 1
+
+fl=internal/errors.js
+fn=hidden errors.js:285
+285 1069082 1
+
+fl=internal/modules/cjs/loader.js
+fn=Module._compile loader.js:1016
+1016 1069082 1
+cfi=file:///home/calvin/src/chrome2calltree/sample/script.js
+cfn= script.js:0
+calls=0 0
+1016 449014777 420
+
+fl=file:///home/calvin/src/chrome2calltree/sample/script.js
+fn= script.js:0
+0 1069082 1
+cfi=file:///home/calvin/src/chrome2calltree/sample/script.js
+cfn=main script.js:20
+calls=0 20
+0 436185783 408
+cfi=internal/console/constructor.js
+cfn=log constructor.js:356
+calls=0 356
+0 11759910 11
+
+fl=file:///home/calvin/src/chrome2calltree/sample/script.js
+fn=main script.js:20
+20 87664789 82
+cfi=file:///home/calvin/src/chrome2calltree/sample/script.js
+cfn=foo script.js:2
+calls=0 2
+20 86595707 81
+cfi=file:///home/calvin/src/chrome2calltree/sample/script.js
+cfn=bar script.js:10
+calls=0 10
+20 261925286 245
+
+fl=file:///home/calvin/src/chrome2calltree/sample/script.js
+fn=foo script.js:2
+2 86595707 81
+
+fl=file:///home/calvin/src/chrome2calltree/sample/script.js
+fn=bar script.js:10
+10 88733872 83
+cfi=file:///home/calvin/src/chrome2calltree/sample/script.js
+cfn=foo script.js:2
+calls=0 2
+10 173191414 162
+
+fl=file:///home/calvin/src/chrome2calltree/sample/script.js
+fn=foo script.js:2
+2 173191414 162
+
+fl=internal/console/constructor.js
+fn=log constructor.js:356
+356 1069082 1
+cfi=internal/console/constructor.js
+cfn=value constructor.js:320
+calls=0 320
+356 9621745 9
+cfi=internal/console/constructor.js
+cfn=value constructor.js:257
+calls=0 257
+356 1069082 1
+
+fl=internal/console/constructor.js
+fn=value constructor.js:320
+320 1069082 1
+cfi=internal/console/constructor.js
+cfn=get constructor.js:202
+calls=0 202
+320 8552662 8
+
+fl=internal/console/constructor.js
+fn=get constructor.js:202
+202 0 0
+cfi=internal/bootstrap/switches/is_main_thread.js
+cfn=getStdout is_main_thread.js:119
+calls=0 119
+202 8552662 8
+
+fl=internal/bootstrap/switches/is_main_thread.js
+fn=getStdout is_main_thread.js:119
+119 0 0
+cfi=internal/bootstrap/switches/is_main_thread.js
+cfn=createWritableStdioStream is_main_thread.js:40
+calls=0 40
+119 8552662 8
+
+fl=internal/bootstrap/switches/is_main_thread.js
+fn=createWritableStdioStream is_main_thread.js:40
+40 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+40 7483579 7
+cfi=tty.js
+cfn=WriteStream tty.js:83
+calls=0 83
+40 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 7483579 7
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=tty.js
+cfn= tty.js:0
+calls=0 0
+269 7483579 7
+
+fl=tty.js
+fn= tty.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 7483579 7
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 7483579 7
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 2138165 2
+cfi=net.js
+cfn= net.js:0
+calls=0 0
+269 5345414 5
+
+fl=net.js
+fn= net.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 3207248 3
+cfi=internal/bootstrap/loaders.js
+cfn=internalBinding loaders.js:136
+calls=0 136
+0 1069082 1
+cfi=net.js
+cfn=protoGetter net.js:705
+calls=0 705
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 3207248 3
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 0 0
+cfi=stream.js
+cfn= stream.js:0
+calls=0 0
+269 3207248 3
+
+fl=stream.js
+fn= stream.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 3207248 3
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 3207248 3
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 2138165 2
+cfi=internal/streams/readable.js
+cfn= readable.js:0
+calls=0 0
+269 1069082 1
+
+fl=internal/streams/readable.js
+fn= readable.js:0
+0 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=nativeModuleRequire loaders.js:302
+calls=0 302
+0 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=nativeModuleRequire loaders.js:302
+302 0 0
+cfi=internal/bootstrap/loaders.js
+cfn=compileForInternalLoader loaders.js:269
+calls=0 269
+302 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=compileForInternalLoader loaders.js:269
+269 1069082 1
+
+fl=internal/bootstrap/loaders.js
+fn=internalBinding loaders.js:136
+136 1069082 1
+
+fl=net.js
+fn=protoGetter net.js:705
+705 1069082 1
+
+fl=tty.js
+fn=WriteStream tty.js:83
+83 0 0
+cfi=net.js
+cfn=Socket net.js:267
+calls=0 267
+83 1069082 1
+
+fl=net.js
+fn=Socket net.js:267
+267 0 0
+cfi=internal/streams/duplex.js
+cfn=Duplex duplex.js:51
+calls=0 51
+267 1069082 1
+
+fl=internal/streams/duplex.js
+fn=Duplex duplex.js:51
+51 0 0
+cfi=internal/streams/readable.js
+cfn=Readable readable.js:186
+calls=0 186
+51 1069082 1
+
+fl=internal/streams/readable.js
+fn=Readable readable.js:186
+186 1069082 1
+
+fl=internal/console/constructor.js
+fn=value constructor.js:257
+257 0 0
+cfi=internal/streams/writable.js
+cfn=Writable.write writable.js:257
+calls=0 257
+257 1069082 1
+
+fl=internal/streams/writable.js
+fn=Writable.write writable.js:257
+257 0 0
+cfi=internal/streams/writable.js
+cfn=writeOrBuffer writable.js:333
+calls=0 333
+257 1069082 1
+
+fl=internal/streams/writable.js
+fn=writeOrBuffer writable.js:333
+333 0 0
+cfi=net.js
+cfn=Socket._write net.js:795
+calls=0 795
+333 1069082 1
+
+fl=net.js
+fn=Socket._write net.js:795
+795 0 0
+cfi=net.js
+cfn=Socket._writeGeneric net.js:758
+calls=0 758
+795 1069082 1
+
+fl=net.js
+fn=Socket._writeGeneric net.js:758
+758 0 0
+cfi=internal/stream_base_commons.js
+cfn=writeGeneric stream_base_commons.js:142
+calls=0 142
+758 1069082 1
+
+fl=internal/stream_base_commons.js
+fn=writeGeneric stream_base_commons.js:142
+142 0 0
+cfi=internal/stream_base_commons.js
+cfn=afterWriteDispatched stream_base_commons.js:150
+calls=0 150
+142 1069082 1
+
+fl=internal/stream_base_commons.js
+fn=afterWriteDispatched stream_base_commons.js:150
+150 0 0
+cfi=internal/streams/writable.js
+cfn=onwrite writable.js:393
+calls=0 393
+150 1069082 1
+
+fl=internal/streams/writable.js
+fn=onwrite writable.js:393
+393 0 0
+cfi=internal/process/task_queues.js
+cfn=nextTick task_queues.js:100
+calls=0 100
+393 1069082 1
+
+fl=internal/process/task_queues.js
+fn=nextTick task_queues.js:100
+100 1069082 1
+
+fl=internal/process/task_queues.js
+fn=processTicksAndRejections task_queues.js:64
+64 0 0
+cfi=internal/streams/writable.js
+cfn=afterWriteTick writable.js:450
+calls=0 450
+64 1069082 1
+
+fl=internal/streams/writable.js
+fn=afterWriteTick writable.js:450
+450 0 0
+cfi=internal/streams/writable.js
+cfn=afterWrite writable.js:455
+calls=0 455
+450 1069082 1
+
+fl=internal/streams/writable.js
+fn=afterWrite writable.js:455
+455 1069082 1
 
